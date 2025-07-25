@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en" th:fragment="layout(content)">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Welcome to NOU e-Gyan Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
+	<link rel="shortcut icon" href="project img/logo.png" type="image/x-icon">
+	
+	<style>
+		.h4{
+					color: #8B0000;
+					font-size: 1.5rem;
+					font-weight: 700;
+					margin-top: 5px;
+					font-family: roboto slab, serif;
+				}
+		        .icon i{
+					height: 33px;
+					width: 33px;
+					
+					border-radius: 50%;
+					padding: 8px;
+				}
+		section .intro{
+		    background-image: url(./nou.jpg);
+		    background-repeat: no-repeat;
+		    height:100%;
+		    width:100%;
+		    min-height: 40vh;
+		}
+		 .ab-box{
+		    background: linear-gradient(rgba(139, 0, 0, .5), rgba(139, 0, 0, .6));
+		    margin-top: 7px;
+		    margin-bottom: 2px;
+		    min-width: 30%;
+		    color: #fff;
+		    font-size: .9rem;
+		    font-family: "poppins", sans-serif;
+		    text-align: center;
+		    float: left;
+		 }      
+		.notice{
+		    padding: 0;
+		    margin-top:8px ;
+		    background:orange;
+		    display: block;
+		}
+		 
+
+		 .about .content p:last-child {
+		    margin-bottom: 0;
+		    text-align: justify;
+		    color: #000;
+		    font-weight: 400;
+		    font-size: .95rem;
+		    font-family: "poppins", sans-serif;
+		}
+		.container {
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;}
+		.section-title h2 {
+		    font-size: .95rem;
+		    font-weight: 700;
+		    padding: 0;
+		    line-height: 1px;
+		    margin: 0 0 5px 0;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		    color: #aaaaaa;
+		    font-family: "Poppins", sans-serif;
+		}
+		.section-title p {
+		    margin: 0;
+		    margin: 0;
+		    font-size: 1.8rem;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    font-family: "Poppins", sans-serif;
+		    color: #000;
+		}
+		.section-title span {
+		    color: darkred;
+		    font-weight: 700;
+		}
+		element.style {
+		    background: linear-gradient(-15deg, rgba(255, 255, 255, .4), rgba(0, 0, 0, .7)), url(./img/bg4.jpg);
+		    min-height: 55vh;
+		    background-repeat: no-repeat;
+		    background-size: 100% 100%;
+		}
+		.rishta {
+		    background: linear-gradient(30deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+		    transition: all 0.5s;
+		    min-height: 5vh;
+		}
+		.top-bar {
+		    padding: 20px;
+		    margin-top: -4rem;
+		}
+		.row {
+		    display: -ms-flexbox;
+		    display: flex
+		;
+		    -ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		    margin-right: -15px;
+		    margin-left: -15px;
+		}
+		.row {
+		    --bs-gutter-x: 1.5rem;
+		    --bs-gutter-y: 0;
+		    display: flex
+		;
+		    flex-wrap: wrap;
+		    margin-top: calc(-1* var(--bs-gutter-y));
+		    margin-right: calc(-.5* var(--bs-gutter-x));
+		    margin-left: calc(-.5* var(--bs-gutter-x));
+		}
+		*, ::after, ::before {
+		    box-sizing: border-box;
+		}
+		.container-fluid {
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+
+		div {
+		    display: block;
+		    unicode-bidi: isolate;
+		}
+		body {
+		    font-family: "Open Sans", sans-serif;
+		    color: #444444;
+		}
+		body {
+		    margin: 0;
+		    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		    font-size: 1rem;
+		    font-weight: 400;
+		    line-height: 1.5;
+		    color: #212529;
+		    text-align: left;
+		    background-color: #fff;
+		}
+		body {
+		    margin: 0;
+		    font-family: var(--bs-body-font-family);
+		    font-size: var(--bs-body-font-size);
+		    font-weight: var(--bs-body-font-weight);
+		    line-height: var(--bs-body-line-height);
+		    color: var(--bs-body-color);
+		    text-align: var(--bs-body-text-align);
+		    background-color: var(--bs-body-bg);
+		    -webkit-text-size-adjust: 100%;
+		    -webkit-tap-highlight-color: transparent;
+		}
+		.rishta span {
+		    color: orange;
+		    box-sizing: border-box;
+		    font-size: 1.5rem;
+		}
+		.team .member .social:hover h4, span {
+		    color: orange;
+		    font-weight: 700;
+		}
+
+		.rishta h4 {
+		    color: #fff;
+		    font-weight: 800;
+		    text-shadow: 0px 0px 1px #000;
+		    font-family: 'Roboto Slab', serif;
+		}
+		h4 {
+		    display: block;
+		    margin-block-start: 1.33em;
+		    margin-block-end: 1.33em;
+		    margin-inline-start: 0px;
+		    margin-inline-end: 0px;
+		    font-weight: bold;
+		    unicode-bidi: isolate;
+		}
+		.container-fluid {
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+
+		#hero{
+		  width: 100%;
+		  background:url(./assets/images/nou.jpg);
+		  background-size:100% 100%;
+		  background-repeat:no-repeat;
+		}
+
+		#hero .carousel-container {
+	
+		  text-align: right;
+		
+		   min-height:40vh;
+		   text-align:right;
+		   padding-top:8rem;
+
+		}
+		#hero h2 {
+		   color: darkred;
+		  font-family:"poppins",sans-serif;
+		  font-size: 35px;
+		  font-weight: 600;
+		  margin-bottom: 20px;
+		     font-weight: 700;
+		  background: linear-gradient(45deg, orange,darkred,orange);
+		  -webkit-background-clip: text;
+		  background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		  background-size: 80%;
+		  animation: shine 3s linear infinite alternate;
+		  position: relative;
+		}
+		#hero .carousel-container span {
+
+		  font-family:"poppins",sans-serif;
+		  font-size: 40px;
+		  animation: shine 3s linear infinite alternate;
+		  margin-bottom: 20px;
+		   text-decoration: none;
+		  color: inherit;
+		  text-align:right;
+
+
+		}
+		@keyframes shine {
+		  0% {
+		    background-position-x: -500%;
+		  }
+		  100% {
+		    background-position-x: 500%;
+		  }
+		}
+		#hero h3 {
+		  color: #fff;
+		  font-size: 20px;
+		  font-weight: 400;
+		}
+		#hero .carousel-item h4 {
+		  color: orange;
+		  font-size: 17px;
+		  font-weight: 600;
+		 animation: shine 3s linear infinite alternate;
+		}
+		#hero .carousel-control-prev, #hero .carousel-control-next {
+		  width: 10%;
+
+		}
+		#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+		  font-size: 48px;
+		  line-height: 1;
+		  width: auto;
+		  height: auto;
+		   background:linear-gradient(rgba(255,0,0,.7),rgba(2,240,241,.6));
+		padding:7px;
+		border-radius:50%;
+		margin-top:10rem;
+
+		}
+		#hero .btn-get-started {
+		  font-family: "Raleway", sans-serif;
+		  font-weight: 500;
+		  font-size: 14px;
+		  letter-spacing: 1px;
+		  display: inline-block;
+		  padding: 12px 32px;
+		  border-radius: 50px;
+		  transition: 0.5s;
+		  line-height: 1;
+		  margin: 10px;
+		  color: #fff;
+		  -webkit-animation-delay: 0.8s;
+		  animation-delay: 0.8s;
+		  border: 2px solid #ef6603;
+		}
+		#hero .btn-get-started:hover {
+		  background: #ef6603;
+		  color: #fff;
+		  text-decoration: none;
+		}
+		@media (min-width: 1024px) {
+		  #hero p {
+		    width: 60%;
+		  }
+		  #hero .carousel-control-prev, #hero .carousel-control-next {
+		    width: 5%;
+		  }
+		}
+		@media (max-width: 768px) {
+		  #hero .carousel-container {
+		    height: 90vh;
+		  }
+		  #hero h2 {
+		    font-size: 28px;
+		  }
+		}
+
+		.hero-waves {
+		  display: block;
+		  width: 100%;
+		  height: 60px;
+		  position: relative;
+		}
+
+		.wave1 use {
+		  -webkit-animation: move-forever1 10s linear infinite;
+		  animation: move-forever1 10s linear infinite;
+		  -webkit-animation-delay: -2s;
+		  animation-delay: -2s;
+		}
+
+		.wave2 use {
+		  -webkit-animation: move-forever2 8s linear infinite;
+		  animation: move-forever2 8s linear infinite;
+		  -webkit-animation-delay: -2s;
+		  animation-delay: -2s;
+		}
+
+		.wave3 use {
+		  -webkit-animation: move-forever3 6s linear infinite;
+		  animation: move-forever3 6s linear infinite;
+		  -webkit-animation-delay: -2s;
+		  animation-delay: -2s;
+		}
+
+
+		@-webkit-keyframes move-forever2 {
+		  0% {
+		    transform: translate(-90px, 0%);
+		  }
+		  100% {
+		    transform: translate(85px, 0%);
+		  }
+		}
+		@keyframes move-forever2 {
+		  0% {
+		    transform: translate(-90px, 0%);
+		  }
+		  100% {
+		    transform: translate(85px, 0%);
+		  }
+		}
+		@-webkit-keyframes move-forever3 {
+		  0% {
+		    transform: translate(-90px, 0%);
+		  }
+		  100% {
+		    transform: translate(85px, 0%);
+		  }
+		}
+		@keyframes move-forever3 {
+		  0% {
+		    transform: translate(-90px, 0%);
+		  }
+		  100% {
+		    transform: translate(85px, 0%);
+		  }
+		}
+			.footer{
+						background-color: #8B0000;
+						color: white;
+					}
+			.footer a{
+				text-decoration: none;
+				list-style: none;
+			}		
+	</style>
+
+ </head>
+  <body>
+	
+	<div class="container-fluid">
+	       <div class="row">
+	           <div class="topbar text-white d-flex " style="background-color: darkred; border-bottom:2px dotted yellow">
+	               <div class="col-sm-3"></div>
+	                <div class="col-sm-5 p-3"><a href=""> <i class="fa-solid fa-phone fa-beat"></i> +91 7080102007     
+						 <i class="fa-solid fa-envelope fa-beat ms-4"></i>nouegyanhelp@gmail.com</a>
+	                </div>
+	                <div class="col-sm-3"></div>
+	                <div class="col-sm-2">
+					<center>	<p>
+							Thu Nov 29 2024 21:00:23 GMT+0530 (India Standard Time)
+						</p></center>
+
+	                </div>
+	           </div>
+	           <div class="topbar2 d-flex text-white" style="background-color: darkred; border-bottom:2px dotted yellow">
+	              
+	               <div class="col-sm-12 text-center p-3" >
+	                   For Admission and Examination related query, Kindly call on University helpline Numbers 9341508580,9341508577,0612-2201013 & 0612-2206916
+	               </div>
+	           </div>
+	       </div>
+	       <div class="nav2 d-flex">
+	           <div class="col-sm-2"></div>
+	           <div class="col-sm-1">
+	               <img src="project img/logo.png"   class="m-2 p-2 w-100">
+	           </div>
+	           <div class="heading ms-4 ">
+	               <h4 class="h4 mt-4">NOU e-Gyan PORTAL</h4>
+	               <h6>(A Concept by Nalanda Open University)</h6>
+	           </div>
+	           <div class="col-sm-3"></div>
+	           <div class="col-sm-3  mt-4 " >
+	               <p class="icon ">
+					<a href="#"><i class="fa-brands fa-twitter px-auto py-auto mt-4" style="color: #74C0FC;border: 1px solid #74C0FC;"></i></a>
+	                   <a href="#"><i class="fa-brands fa-facebook ms-1 px-auto py-auto mt-4" style="color: #2e318e;border: 1px solid #2e318e;"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram ms-1 px-auto py-auto mt-4" style="color: #df438f;border: 1px solid #df438f;"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin ms-1 px-auto py-auto mt-4" style="color: #3176aa;border: 1px solid #3176aa;"></i></a>
+					<a href="#"><i class="fa-brands fa-youtube ms-1 px-auto py-auto mt-4" style="color: #fc0335;border: 1px solid #fc0335;"></i></a>
+				</p>
+				 </div>
+	       
+	       </div>
+	       </div>
+	   </div>
+	   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	 
+	 
+
+
+	    <section id="hero" class="d-flex flex-column justify-content-end align-items-centre">
+	      <div id="heroCarousel" data-bs-interval="5000" class="container-fluid carousel carousel-fade" data-bs-ride="carousel">
+
+	     <div class="row top-bar rishta">
+
+	     <div class="col-sm-1">
+	     </div>
+
+	     <div class="col-sm-4">
+	      <h4>WELCOME
+	         <span> STUDENTS</span></h4>
+	     </div>
+	     <div class="col-sm-7">
+
+
+	       <nav class="navbar navbar-expand-lg navbar-dark">
+	       <div class="container-fluid">
+
+	         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	           <span class="navbar-toggler-icon"></span>
+	         </button>
+	         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	           <ul class="navbar-nav mx-auto me-0">
+				<li class="nav-item">
+				               <a class="nav-link text-light" href="/"><i class="bi bi-textarea-t"></i><i class="fa-solid fa-house"></i> Home</a></a>
+				             </li>
+	             </li>
+				 <li class="nav-item">
+				 				               <a class="nav-link text-light" href="/"><i class="bi bi-textarea-t"></i> About Us</a></a>
+				 				             </li>
+				 	             </li>
+	             <li class="nav-item">
+	               <a class="nav-link text-light" href="/registration"><i class="bi bi-book-half"></i><i class="fa-regular fa-address-card"></i> Registration</a>
+	             </li>
+	             <li class="nav-item">
+	               <a class="nav-link text-light" href="/stulogin"><i class="bi bi-textarea-t"></i><i class="fa-solid fa-graduation-cap"></i> Student Login</a></a>
+	             </li>
+
+	             <li class="nav-item">
+	               <a class="nav-link text-light" href="/adminlogin"><i class="bi bi-mortarboard-fill"></i> <i class="fa-solid fa-user"></i>Admin Login</a></a>
+	             </li>
+				 <li class="nav-item">
+				   <a class="nav-link text-light" href="/contactus"><i class="bi bi-mortarboard-fill"></i> <i class="fa-solid fa-phone"></i>Contact Us</a></a>
+				              </li>
+
+
+	           </ul>
+	         </div>
+	       </div>
+	     </nav>
+
+	     </div>
+
+	      </div>
+
+	       <!-- Slide 1 -->
+	      <div class="container">
+	        <div class="carousel-item active">
+	          <div class="carousel-container">
+	      <h3 class="animate__animated animate__fadeInDown">Get Educated</h2>
+	            <h2 class="animate__animated animate__fadeInUp">From Our Content<br/>
+	        <span class="animate__animated animate__fadeInDown">For Distance Learning </span></h2>
+	            <h4 class="animate__animated fanimate__adeInUp">NOU-e-Gyan PORTAL, CONCEPT BY NALANDA OPEN UNIVERSITY</h4>
+
+	          </div>
+	        </div>
+
+	        <!-- Slide 2 -->
+	        <div class="carousel-item">
+	         <div class="carousel-container">
+	      <h3 class="animate__animated animate__fadeInDown">Get Educated</h2>
+	            <h2 class="animate__animated animate__fadeInUp">From Our Content<br/>
+	        <span class="animate__animated animate__fadeInDown">For Distance Learning </span></h2>
+	            <h4 class="animate__animated fanimate__adeInUp">NOU-e-Gyan PORTAL, CONCEPT BY NALANDA OPEN UNIVERSITY</h4>
+
+	          </div>
+	        </div>
+
+	        <!-- Slide 3 -->
+	        <div class="carousel-item">
+	           <div class="carousel-container">
+	      <h3 class="animate__animated animate__fadeInDown">Get Educated</h2>
+	            <h2 class="animate__animated animate__fadeInUp">From Our Content<br/>
+	        <span class="animate__animated animate__fadeInDown">For Distance Learning </span></h2>
+	            <h4 class="animate__animated fanimate__adeInUp">NOU-e-Gyan PORTAL, CONCEPT BY NALANDA OPEN UNIVERSITY</h4>
+
+	          </div>
+	        </div>
+
+	        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+	          <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+	        </a>
+
+	        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+	          <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+	        </a>
+	      </div>
+	     </div>
+	    </section><!-- End Hero -->
+
+	    
+	    <main id="main">
+
+
+	                 
+	            
+	      
+	    <!--start-->
+	    <section class="notice">
+	        <div class="container-fluid">
+	               <div class="row bg-warning">
+	           <div class="col-sm-12">
+	                  <marquee scrollamount="12" onmousemove="this.stop()" onmouseout="this.start()">
+	                  <p class="ab-box me-3 ">The portal is easy to access & highly user <br/>friendly for the students & study centres.</p>
+	                  <p class="ab-box me-3  ">The portal is fully secured and accessible <br/>24 x 7 to its authorised users.</p>
+	                  <p class="ab-box ">The portal is easy to access & highly user<br/> friendly for the students & study centres.</p>
+	              </marquee>
+	           </div>
+
+	           </div>
+	        </div>
+	    </section>
+
+	 
+	 
+		<div class="row mt-2" style="min-height:700px; height: auto;">
+			<div th:replace="${content}"></div>
+		</div>
+		
+		<div class="row footer">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-3">
+						<div class="ms-5">
+						<a href="#"><img class="ms-5 p-2" src="project img/logo.png" alt="" height="100px" width="100px"></a>
+					</div>
+						<div>
+						<p class="justify"><b>Nalanda Open University is a State Open University duly established under the Act of Bihar Government and is also recognized by Distance Education Council, IGNOU, Maidan Garhi, New Delhi.</b></p>
+					</div>
+						
+						<div>
+							<p class="symbol ms-5">
+								
+								<a href="#"><i class="fa-brands fa-facebook"></i></a>
+								<a href="#"><i class="fa-brands fa-twitter ms-1" ></i></a>
+								<a href="#"><i class="fa-brands fa-google-plus-g ms-1"></i></a>
+								<a href="#"><i class="fa-brands fa-linkedin ms-1"></i></a>
+								
+								<a href="#"><i class="fa-brands fa-instagram ms-1"></i></a>
+							</p>
+						</div>
+					</div>
+					<div class="col-sm-2 useful p-4 ms-4">
+						<h3 class="mb-4">Useful Links</h3>
+						
+						<ul>
+							
+							<li class="mb-2" ><a href="">Home</a></li>
+							<li class="mb-2"><a href="">About portal</a></li>
+							<li class="mb-2"><a href="">Services</a></li>
+							<li class="mb-2"><a href="">Contact us</a></li>
+							<li class="mb-2"><a href="">Courses</a></li>
+							<li class="mb-2"><a href="">Study center</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-2  p-4 ms-2">
+						<h3 class="mb-4">Contact Info</h3>
+						<div>
+						<h5><i class="fa-solid fa-location-dot"></i> NOU </h5></div>
+						<p class="address">2nd/3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 001 (BIHAR).</p>
+						<div>
+							<h5><a><i class="fa-solid fa-phone-volume"></i>+917080102007</a> </h5>
+						</div>
+						<p>Give us a call</p>
+					</div>
+					<div class="col-sm-3 p-4 ms-4">
+						<h3 class="mb-2" >Subscribe</h3>
+						<span class="animate-border border-black mb-4" style="position: relative;
+		    display: block;
+		    width: 115px;
+		    height: 3px;
+		    background: #ef6603;"></span>
+						
+						<p>Fill the detail below to receive 
+							<br>the manual of the NOU e-Gyan<br> Portal</p>
+						<div class="col-sm-5 bg-black  my-auto mx-auto">
+							<div class="email-input d-flex  bg-white rounded-pill">
+							<input  type="email" placeholder="Search"  style="border-radius: 20px 0px 0px 20px;" class="form-control  text-secondary bg-black border-secondary" >
+							<button class="btn bg-secondary text-white  " style="border-radius: 0px 20px 20px 0px;"><i class="fa-solid fa-magnifying-glass border-secondary"></i></button>
+							
+							</div>
+							
+							
+						  </div>
+						
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+				<div class="row ">
+					<div class="col-sm-12 p-1" style="color:white;background-color:#660000;font-size:17px;text-align:center;">
+						© Copyright 2024 Designed & Developed By | Softpro India Computer Technologies (P) Ltd.
+					</div>
+					
+					
+				</div>
+	</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

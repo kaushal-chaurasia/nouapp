@@ -1,0 +1,110 @@
+<html th:replace="base::layout(~{::section})">
+	<head>
+		
+	</head>
+	<body>
+		<section style=background-color-primary>
+			<h2  style="text-align: center; color: blue;"> Registration </h2>
+			<form class="form-group" th:object="${dto}" method="post">
+				<table class="table table-bordered" style="width:60%;margin:auto;">
+	                <tr>
+						<td>Enter Entrollment No</td>
+						<td><input type="number" th:field="${dto.enrollmentno}" class="form-control" required></td>
+					</tr>
+					<tr>
+						<td>Enter Name</td>
+						<td><input type="text" th:field="${dto.name}" class="form-control" required></td>
+					</tr>	
+					<tr>
+						<td>Enter Father Name</td>
+						<td>
+							<input type="text" th:field="${dto.fname}" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Mother Name</td>
+						<td>
+							<input type="text" th:field="${dto.mname}" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Gender</td>
+						<td>
+							<input type="radio" th:field="${dto.gender}" value="Male"/>Male
+							<input type="radio" th:field="${dto.gender}" value="Female"/>Female
+							
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Address</td>
+						<td>
+							<textarea  th:field="${dto.address}" class="form-control" required></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Program</td>
+						<td>
+							
+								<select th:field="${dto.program}" class="form-control">
+									<option value="B.Tech.">B.Tech.</option>
+									<option value="M.Tech.">M.Tech.</option>
+									<option value="B.C.A.">B.C.A.</option>
+									<option value="M.C.A.">M.C.A.</option>
+							</select>
+						</td>
+						
+					</tr>	
+					<tr>
+						<td>Select Branch</td>
+						<td>
+						<select th:field="${dto.branch}" class="form-control">
+							<option value="CSE">CSE</option>
+							<option value="IT">IT</option>
+							<option value="C.A.">C.A.</option>
+						</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Select Year</td>
+						<td>
+							<select th:field="${dto.year}" class="form-control" required>
+								<option value="First Year">First Year</option>
+								<option value="Second Year">Second Year</option>
+								<option value="Third Year">Third Year</option>
+								<option value="Final Year">Final Year</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Contact</td>
+						<td>
+							<input type="number" th:field="${dto.contactno}" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter Email</td>
+						<td>
+							<input type="email" th:field="${dto.emailaddress}" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<td>Enter password</td>
+						<td>
+							<input type="password" th:field="${dto.password}" class="form-control" required>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" class="btn btn-success">Register</button>
+						</td>
+					</tr>
+					
+									
+				</table>
+				
+			</form>
+			
+		</section>
+	</body>
+</html>

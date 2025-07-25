@@ -1,0 +1,54 @@
+<html th:replace="~{student/studentbase::layout(~{::section})}">
+	<head>
+		<title>Student Zone-NOU e-Gyan</title>
+	</head>
+	<body>
+		<section>
+			<div class="row">
+						<h1 style="text-align: center;"> student dashboard</h1>
+						<div class="col-sm-10 mx-auto shadow bg-warning bg-opacity-50">
+							<div class="row">
+								<div class="col-md-5">
+									<div class="text-center" th:if="${stdinfo.profilepic}">
+										<img alt="image not found" class="rounded-circle mt-3 mb-2" height="150px" width="150px" th:src="@{'/profile/'+${stdinfo.profilepic}}" >
+									</div>
+									<div class="text-center" th:unless="${stdinfo.profilepic}">
+										<img alt="image not found" height="150px" width="150px" class="rounded-circle mt-3 mb-2" src="../images/user.jpg">
+									</div>
+									<div class="p-3">
+										<form method="post" class="px-4" style="display: flex; justify-content: space-around;" enctype="multipart/form-data">
+											<input type="file" name="file" required="required" class="form-control w-50 mx-1" >
+											<button type="submit" class="btn btn-primary w-50 mx-1">Upload Pic</button>
+										</form>
+									</div>
+							        </div>
+								</div>
+								<div class="col-md-7">
+									<div class="d-flex justify-content-center align-items-centers">
+										<table>
+											<tr>
+												<th>Name :</th>
+												<td th:text="${stdinfo.name}"></td>
+											</tr>
+											<tr>
+												<th>Enrollment no :</th>
+												<td th:text="${stdinfo.enrollmentno}"></td>
+										     </tr>
+											 <tr>
+											 	<th>Mobile no :</th>
+											 	<td th:text="${stdinfo.contactno}"></td>
+											 	</tr>
+												<tr>
+												<th>Branch :</th>
+												<td th:text="${stdinfo.branch}"></td>
+											  </tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+			</div>
+		</section>
+	</body>
+	
+</html>
